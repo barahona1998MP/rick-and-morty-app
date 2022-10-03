@@ -1,0 +1,81 @@
+.App {
+    background-color: #05292E;
+    min-height: 100vh;
+}
+
+.App__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../public/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25rem;
+    margin-bottom: 1rem;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@media  (max-width: 760px){
+    .contenedor {
+        margin: 0 1rem;
+    }
+}
+
+@media (min-width: 875px) {
+    .App__header {
+        background-size: cover;
+    }
+}
+@media (max-width: 785px) {
+    .App__header {
+        max-height: 10rem;
+        background-size: cover;
+    }
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: #05292e;
+    width: min(60rem, 100%); /* Utilizar el valor más pequeño*/
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.formulario .search {
+    border: none;
+}
+
+.input__search {
+    width: 40rem;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+/*BOTON*/
+.boton {
+    text-decoration: none;
+    background-color: #062226;
+    color: #f9f9f9;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    width: 15rem;
+    text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+

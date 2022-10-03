@@ -1,0 +1,37 @@
+.location {
+    background-color: #062226;
+    max-width: 75rem;
+    min-height: 10rem;
+    margin: 0 auto;
+    color: #f9f9f9;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.location__name {
+    text-align: center;
+    margin: 0;
+}
+
+
+.location__item {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.location__list {
+    list-style: none;
+}
+
+
+@media (min-width: 500px) {
+    .location__item {
+        flex-direction: row;
+    }
+}

@@ -9,22 +9,21 @@ import getRandomNumber from './utils/getRandomNumber'
 
 function App() {
   const [location, setLocation] = useState()
-  const [searchInput, setSearchInput] = useState('')
-  const [pageNumber, setPageNumber] = useState(1)
+  const [searchInput, setSearchInput] = useState()
 
   useEffect(() => {
     let id = getRandomNumber()
     if(searchInput) {
       id = searchInput
-    } else {
-      id = pageNumber
     }
     let URL = `https://rickandmortyapi.com/api/location/${id}`
     axios.get(URL)
-      .then(res => setLocation(res.data))
+      .then(res =>{ 
+        setLocation(res.data)
+      })
       .catch(err => console.error(err))
 
-  },[searchInput, pageNumber])
+  },[searchInput])
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -55,11 +54,6 @@ function App() {
           }
         </div>
       </div>
-
-      <Pagination 
-        setPageNumber={setPageNumber}
-        pageNumber={pageNumber}
-      />
     </div>
   )
 }
